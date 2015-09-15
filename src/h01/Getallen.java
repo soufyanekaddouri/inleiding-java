@@ -9,7 +9,7 @@ private static final long serialVersionUID = 1L;
 	double perpersoon;
 
     public void init() {
-		perpersoon = 113 / 4;
+		perpersoon = (double) 113 / 4;
 		
 		
 
