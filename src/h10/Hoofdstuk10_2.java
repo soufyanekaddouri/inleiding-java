@@ -10,13 +10,14 @@ import java.awt.event.ActionListener;
 
 
 
-public class Hoofdstuk10_1 extends Applet {
+public class Hoofdstuk10_2 extends Applet {
                                                   private static final long serialVersionUID = 1L;
 
 //DECLARATIE
 TextField Input1;
 Button Knop;
-String Text = "0";
+String Text  = "0";
+String Text2 = "0";
 
 KnopListener kl = new KnopListener();
 
@@ -42,8 +43,12 @@ public void init() {
    	
 	    if (Integer.parseInt(Input1.getText()) >= Integer.parseInt(Text)) {
 	    	Integer.parseInt(Text = Input1.getText());
+	    	
 	    }
 	    
+	    else Integer.parseInt(Text2 = Input1.getText()); {
+	    	
+	    }
 	    repaint();
 	    	
 
@@ -54,11 +59,16 @@ public void init() {
 		g.setColor(Color.white);
 		g.drawString("Het hoogste getal is:", 0, 100);
 		
+		g.setColor(Color.white);
+		g.drawString("Het laagste getal is:", 0, 120);
+		
 		g.setColor(Color.magenta);
 		g.drawString("=====> ", 140, 100);
+		g.drawString("=====>", 140, 120);
 		
 		g.setColor(Color.blue);
 		g.drawString(Text, 200, 100);
+		g.drawString(Text2, 200, 120);
 		
 	}
 
