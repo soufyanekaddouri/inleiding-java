@@ -62,7 +62,7 @@ ButtonListener2 bl2 = new ButtonListener2();
 		   g.drawString("en " + naam + " heeft " + getal + " dagen!", 0, 140);
 		   
 		   g.setColor(Color.GREEN);
-		   g.drawString("Het jaar " + jaartal + welniet, 0, 170);
+		   g.drawString("Het jaar " + jaar.getText()+ welniet, 0, 170);
 		   
 		   g.setColor(Color.red);
 		   g.drawString("Jaartal invoeren van 2015 tot 2020", 0, 200);
@@ -147,140 +147,15 @@ ButtonListener2 bl2 = new ButtonListener2();
 	   class ButtonListener2 implements ActionListener {
 		   public void actionPerformed( ActionEvent e) {
 			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2016")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
+			   if ( (Integer.parseInt(jaar.getText()) % 4 == 0 && !(Integer.parseInt(jaar.getText()) % 100 == 0)) ||
+					   Integer.parseInt(jaar.getText()) % 400 == 0 ) {
+				   welniet = " is een schrikkeljaar";  
+			   }
 			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
+				   welniet = " is geen schrikkeljaar";
+			   }
+			   
 			   repaint();
-			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2020")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
-			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
-			   repaint();
-			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2024")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
-			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
-			   repaint();
-			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2028")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
-			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
-			   repaint();
-			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2032")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
-			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
-			   repaint();
-			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2036")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
-			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
-			   repaint();
-			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2040")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
-			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
-			   repaint();
-			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2044")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
-			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
-			   repaint();
-			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2048")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
-			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
-			   repaint();
-			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2052")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
-			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
-			   repaint();
-			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2056")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
-			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
-			   repaint();
-			   
-			   if (Integer.parseInt(jaar.getText()) == Integer.parseInt("2060")) {
-			    	jaartal = jaar.getText();
-			    	welniet = " is een schrikkeljaar!";
-			   
-			    }	  
-			   else {
-			    	jaartal = jaar.getText();
-			    	welniet = " is geen schrikkeljaar!";
-			    }
-			   repaint();
-			   
-			   
-			   
 		   }
 	   }
 	   

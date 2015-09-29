@@ -15,8 +15,18 @@ public class Hoofdstuk10_5 extends Applet {
 	Button ok;
 	Button reset;
 	
+	int klikken;
+	
 	String waardering;
-	String gemiddelde;
+	
+
+	
+	double gemiddelde;
+	double aantal;
+	double som;
+	double waarderings;
+	
+	String s;
 	
 	OkListener ol    = new OkListener();
 	ResetListener rl = new ResetListener();
@@ -31,8 +41,9 @@ public class Hoofdstuk10_5 extends Applet {
 		ok.addActionListener(ol);
 		reset.addActionListener(rl);
 		
-		waardering = " ";
-		gemiddelde = " ";
+		waarderings = 0;
+		aantal = 0;
+		som = 0;
 		add(cijfer);
 		add(ok);
 		add(reset);
@@ -40,12 +51,17 @@ public class Hoofdstuk10_5 extends Applet {
 	
 	public void paint(Graphics g) {
 		g.drawString("Het cijfer is een " + waardering, 0, 100);
-		g.drawString("Op dit moment is je gemiddelde een " + gemiddelde, 0, 120);
+		g.drawString("Op dit moment is je gemiddelde een " + (som/klikken), 0, 120);
 	}
 	
 	
 	class OkListener implements ActionListener {
 		public void actionPerformed (ActionEvent e) {
+			
+			s = cijfer.getText();
+			waarderings = Double.parseDouble(s);
+			klikken++;
+			som += waarderings;
 			if (Double.parseDouble(cijfer.getText()) < Double.parseDouble("5.5")) {
 				waardering = "onvoldoende";
 			}
@@ -59,7 +75,11 @@ public class Hoofdstuk10_5 extends Applet {
 	
 	class ResetListener implements ActionListener {
 		public void actionPerformed (ActionEvent e) {
-			
+		klikken = 0;
+		som = 0;
+		waarderings = 0;
+		cijfer.setText("");
+		repaint();
 		}
 	}
 	
