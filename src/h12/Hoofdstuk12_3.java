@@ -6,7 +6,7 @@ import java.awt.Graphics;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
+
 
 public class Hoofdstuk12_3 extends Applet {
 	private static final long serialVersionUID = 1L;
@@ -22,6 +22,8 @@ public class Hoofdstuk12_3 extends Applet {
     int getal3;
     int getal4;
     int getal5;
+    
+    
   
 	KnopListener kl = new KnopListener();
     
@@ -34,6 +36,8 @@ public class Hoofdstuk12_3 extends Applet {
 			woordjes[i] = new TextField(20);
 			add(woordjes[i]);
 			add(ok);
+			
+			
 		}
 		
 		
