@@ -12,14 +12,17 @@ public class Hoofdstuk14_1 extends Applet{
 	Double kleur;
 	Double kaart;
 	
+	
 	public void init() {
 		setSize(200,200);
 		
-		kleur = Math.random();
+		
+		
+		
 	}
 	
 	public void paint(Graphics g) {
-		g.drawString("" + kleur * 6, 50, 50);
+		
 	}
 	
 	
